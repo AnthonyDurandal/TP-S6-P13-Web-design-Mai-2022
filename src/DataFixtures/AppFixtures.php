@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Article;
 use App\Entity\Category;
 use App\Entity\User;
+use App\Helper\UrlHelper;
 use DateTimeImmutable;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -48,7 +49,7 @@ class AppFixtures extends Fixture
                 $article->setHeader('De nombreux incendies en australie');
                 $article->setAuthorName($faker->name);
                 $article->setCategory($category_accident);
-                $article->setUrlPath('url path euh');
+                $article->setUrlPath(UrlHelper::slugify('incendies en australie accident rechauffement climatique'));
                 $article->setCreatedAt(DateTimeImmutable::createFromMutable($faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null)));
                 $article->setContent('
 Les <strong>incendies</strong> australiens, nommés bushfire ou feux de brousse, suscitent un battage médiatique permanent, fondé en grande partie sur une cause ostentatoire et considérée comme une évidence : le « réchauffement climatique ».
