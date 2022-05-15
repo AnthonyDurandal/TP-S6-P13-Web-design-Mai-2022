@@ -1,0 +1,8 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^([_a-z0-9]*)/([-_a-z0-9]*)_([_a-z0-9]*).html$  versFiche.php?id=$3&url=$2
+
+#backup RewriteRule ^([_a-z0-9]*)/([-_a-z0-9]*)_([_a-z0-9]*).html$  fiche.php?id=$3&url=$2
+
+# RewriteRule ^([_a-z0-9]*)/([-_a-z0-9]*)-([_a-z0-9]*).html$  fiche.php?id=$3&url=$2
+#diso euh RewriteRule ^.*/?.*-([_a-z0-9]*).html$  fiche.php?id=$1

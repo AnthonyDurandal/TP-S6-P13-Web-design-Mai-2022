@@ -1,0 +1,22 @@
+.green-text {
+    color: #1abc9c;
+    /* font-weight: 600; */
+}
+
+.green-text:hover {
+    color: #333333;
+}
+
+.center-content{
+    display:flex;
+    justify-content:center
+}
+
+.half-less-width{
+    width: 45vw;
+}
+
+.url-content{
+    display: flex;
+    align-items: center;
+}
