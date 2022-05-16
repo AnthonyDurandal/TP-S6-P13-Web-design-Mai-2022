@@ -32,7 +32,7 @@ class SimpleUserController extends AbstractController
         return $this->render('simple_user/articles.html.twig', $data);
     }
 
-    #[Route('/fiche', name: 'fiche_article')]
+    #[Route('fiche', name: 'fiche_article')]
     public function ficheArticle(Request $request): Response
     {
         #params = url + id
