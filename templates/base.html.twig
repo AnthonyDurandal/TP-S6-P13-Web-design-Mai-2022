@@ -27,9 +27,28 @@
 
 
 	</head>
+<style>
+	.background-wallpaper-container {
+		background-color: blue;
+		width: 100vw;
+		height: 40vh;
+		margin:0px;
+	}
 
-	<body>
+	.background-wallpaper{
+		width: 100%;
+		height: 100%;
+	}
 
+	html,body {
+		margin:0;
+		padding:0;
+		overflow-x:hidden;
+	}
+</style>
+
+
+<body class="body-container">
 
 		{# <!-- Preloader Start -->
 		<div class="preloader">
@@ -37,7 +56,11 @@
 		</div>
 		<!-- Preloader End --> #}
 
+		<div class="background-wallpaper-container">
+			background euh
+		<img src="{{ asset('build/images/template-imgs/recyclage-rechauffement-climatique.png') }}" alt="" class="background-wallpaper"/>
 
+		</div>
 		<div id="main" style='display:flex;justify-content:center'>
 			<div class="container" style='width: 45vw;'>
 				<div
@@ -57,7 +80,8 @@
                                     <i class="icon-bubbles" class="green-text"></i>
                                 </div>
 
-								<div class="col-md-12 content-page">
+								<div class="col-md-12 content-page" style="padding-left:20px;padding-right:20px;">
+
 
 
 									<!-- page content start -->

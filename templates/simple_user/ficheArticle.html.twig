@@ -34,33 +34,29 @@
 
 	<!-- Post Image Start -->
 	<div class="post-image margin-top-40 margin-bottom-40">
-		<img src="images/blog/1.jpg" alt="">
-		<p>quelques images en aperçu</p>
+
+		<img src="{{ asset('build/images/pattern-bg.3c10a35f.png') }}" alt="premiere image">
+
+
+		<p>Aidez nous à sauver notre chère planète.</p>
 		<p></p>
 	</div>
 	<!-- Post Image End -->
 
 	<!-- Post Image Gallery Start -->
-	<div class="row margin-top-40 margin-bottom-40">
+	<div class="row margin-top-40 margin-bottom-40" style='display:grid;grid-template-column:1fr 1fr 1fr;'>
 
-		<div class="col-md-4 col-sm-6 col-xs-12">
-			<a href="images/blog/7.jpg" class="image-popup" title="image Title">
-				<img src="images/blog/7.jpg" class="img-responsive" alt="">
-			</a>
+		<div class="">
+				<img src="{{ asset('build/images/template-imgs/hausse-niveau-mer-rechauffement-climatique.jpeg') }}" class="img-responsive" alt="hausse-niveau-mer-rechauffement-climatique" style='width:100%'>
 		</div>
 
-		<div class="col-md-4 col-sm-6 col-xs-12">
-			<a href="images/blog/5.jpg" class="image-popup" title="image Title">
-				<img src="images/blog/5.jpg" class="img-responsive" alt="">
-			</a>
+		<div class="">
+			<img src="{{ asset('build/images/template-imgs/secheresse-rechauffement-climatique.jpg') }}" class="img-responsive" alt="secheresse-rechauffement-climatique" style='width:100%'>
 		</div>
 
-		<div class="col-md-4 col-sm-6 col-xs-12">
-			<a href="images/blog/6.jpg" class="image-popup" title="image Title">
-				<img src="images/blog/6.jpg" class="img-responsive" alt="">
-			</a>
+		<div class="">
+			<img src="{{ asset('build/images/template-imgs/ours-polaire-rechauffement-climatique.jpg') }}" class="img-responsive" alt="ours-polaire" style='width:100%'>
 		</div>
-
 	</div>
 	<!-- Post Image Gallery End -->
 
