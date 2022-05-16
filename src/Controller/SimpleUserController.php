@@ -31,31 +31,21 @@ class SimpleUserController extends AbstractController
 
         return $this->render('simple_user/articles.html.twig', $data);
     }
-
-    #[Route('fiche', name: 'fiche_article')]
-    public function ficheArticle(Request $request): Response
+    #regex diso : ^([_-a-z0-9]*)$; regex marina : ^([-_a-z0-9]*)$
+    #[Route('{category}/{url}_{id}.html', name: 'fiche_article', requirements:['category'=>'^([-_a-z0-9]*)$' , 'url' => '^([-a-z0-9]*)$' , 'id' => '^([0-9]*)$'])]
+    public function ficheArticle(Request $request, string $url, int $id): Response
     {
-        #params = url + id
-        #verification si url valide
-        #verification si id valide
-            #select * from where url = and id=
-
-        if(! $request->query->get('id')){
-            throw new Exception('$GET[id] == null , at SimpleUserController.ficheArticle()');
-        }else if(! $request->query->get('url')){
-            throw new Exception('$GET[url] == null , at SimpleUserController.ficheArticle()');
-        }
-
-        $id = $request->query->get('id');
-        $url = $request->query->get('url');
-
         $article = $this->articleRepository->findOneByIdAndUrl($id, $url);
         
         if(!$article)throw new Exception(sprintf('findOneByIdAndUrl returned null [id: %s, url:%s]', $id, $url));
-
+        #config avec cache
+        /*
         $fileName = $this->creerFichierSiInexistant($article, $id);
         
         return $this->render($fileName);
+        */
+        #sans cache client
+        return $this->render('simple_user/ficheArticle.html.twig', ['article' => $article]);
     }
 
     function creerFichierSiInexistant(Article $article,string|int $article_id)
