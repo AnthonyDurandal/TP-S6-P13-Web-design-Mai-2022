@@ -8269,7 +8269,7 @@
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
-                    "Symfony\\Bundle\\DebugBundle\\": ""
+                    "Symfony\\Bundle\\DebugBundle\\": "App/src"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
